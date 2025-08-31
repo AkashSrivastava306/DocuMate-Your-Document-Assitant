@@ -23,7 +23,7 @@ It provides multiple enterprise-ready features like document chat, summarization
 - **Backend/Logic** – Python (Custom ML/NLP pipelines)
 - **LLM Integration** – OpenAI/Groq/Custom models (plug & play)
 - **Data Handling** – PyPDF2, python-docx, Pandas
-- **Deployment** – Azure / Localhost
+
 
 ---
 
@@ -31,12 +31,9 @@ It provides multiple enterprise-ready features like document chat, summarization
 
 ```
 ├── app.py                   # Main Streamlit app
-├── rag/                     # RAG pipelines for document loading & splitting
-├── summarization.py         # Summarization pipeline
-├── extraction.py            # Information extraction pipeline
-├── grammar_check.py         # Grammar & spelling correction pipeline
-├── formatting.py            # Formatting and styling checks
-├── fact_check.py            # Fact verification pipeline
+├── rag.py                   # RAG pipelines for document loading & splitting,Summarization pipeline,Information extraction pipeline
+├── formattingandstyling.py            # Formatting and styling checks
+├── fact_pipeline.py            # Fact verification pipeline,Grammar & spelling correction pipeline
 ├── content_suggestion.py    # Content recommendation pipeline
 └── README.md                # Project documentation
 ```
@@ -47,7 +44,7 @@ It provides multiple enterprise-ready features like document chat, summarization
 
 1. Clone the repository  
 ```bash
-git clone https://github.com/your-username/documate.git
+https://github.com/AkashSrivastava306/DocuMate-Your-Document-Assitant.git
 cd documate
 ```
 
@@ -79,7 +76,7 @@ streamlit run app.py
 
 ---
 
-## 🎯 POC Value
+## 🎯 
 
 This project demonstrates how **Generative AI + RAG pipelines** can be combined for enterprise use cases like:  
 - Automating knowledge retrieval  
@@ -93,8 +90,8 @@ Perfect for **resume showcase, enterprise demo, and portfolio projects**.
 ## 👨‍💻 Author
 
 **Akash Srivastava**  
-Machine Learning Engineer | NLP Enthusiast  
-(Feel free to update LinkedIn/GitHub links here)
+Conversational AI Developer | NLP Enthusiast  
+https://www.linkedin.com/in/akash-srivastava-enthusiast/
 
 ---
 
