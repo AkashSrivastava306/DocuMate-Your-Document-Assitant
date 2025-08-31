@@ -32,8 +32,8 @@ It provides multiple enterprise-ready features like document chat, summarization
 ```
 ├── app.py                   # Main Streamlit app
 ├── rag.py                   # RAG pipelines for document loading & splitting,Summarization pipeline,Information extraction pipeline
-├── formattingandstyling.py            # Formatting and styling checks
-├── fact_pipeline.py            # Fact verification pipeline,Grammar & spelling correction pipeline
+├── formattingandstyling.py  # Formatting and styling checks
+├── fact_pipeline.py         # Fact verification pipeline,Grammar & spelling correction pipeline
 ├── content_suggestion.py    # Content recommendation pipeline
 └── README.md                # Project documentation
 ```
