@@ -10,3 +10,16 @@ PyMuPDF
 python-dotenv
 tqdm
 docx2txt
+streamlit
+langchain
+langchain-community
+langchain-core
+langchain-text-splitters
+openai
+faiss-cpu
+tiktoken
+pypdf
+python-dotenv
+transformers
+torch
+torchvision
