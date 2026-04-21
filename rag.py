@@ -50,10 +50,7 @@ def split_docs(docs, chunk_size=1000, chunk_overlap=200):
     return splitter.split_documents(docs)
 
 #embedding model
-embedding_model = get_embeddings()(
-    model_name="sentence-transformers/all-MiniLM-L6-v2"
-)
-
+embedding_model = get_embeddings()
 #making of indexing vector store 
 def build_qa(docs):
     # Create embeddings + vector store
