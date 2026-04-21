@@ -9,8 +9,8 @@ from langchain_groq import ChatGroq
 import os
 
 #loading llm env groq
-load_dotenv()
-GROQ_API_KEY = os.getenv("GROQ_API_KEY")
+import streamlit as st
+GROQ_API_KEY = st.secrets.get("GROQ_API_KEY")
 
 #llm
 llm = ChatGroq(
