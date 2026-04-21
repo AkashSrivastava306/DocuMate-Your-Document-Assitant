@@ -5,8 +5,8 @@ from langchain_groq import ChatGroq
 from docx import Document
 
 # ✅ Load API keys from .env
-load_dotenv()
-groq_api_key = os.getenv("GROQ_API_KEY")
+import streamlit as st
+GROQ_API_KEY = st.secrets.get("GROQ_API_KEY")
 
 # ✅ Initialize Groq LLM
 llm = ChatGroq(model="llama3-70b-8192", api_key=groq_api_key)
