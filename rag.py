@@ -19,6 +19,14 @@ llm = ChatGroq(
     groq_api_key=GROQ_API_KEY
 )
 
+import streamlit as st
+@st.cache_resource
+def get_embeddings():
+    return HuggingFaceEmbeddings(
+        model_name="sentence-transformers/all-MiniLM-L6-v2"
+    )
+
+
 # data ingestion 
 def load_document(file_path):
     if str(file_path).endswith(".pdf"):
@@ -42,7 +50,7 @@ def split_docs(docs, chunk_size=1000, chunk_overlap=200):
     return splitter.split_documents(docs)
 
 #embedding model
-embedding_model = HuggingFaceEmbeddings(
+embedding_model = get_embeddings()(
     model_name="sentence-transformers/all-MiniLM-L6-v2"
 )
 
