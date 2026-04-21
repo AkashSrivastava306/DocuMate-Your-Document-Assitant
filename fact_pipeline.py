@@ -8,8 +8,7 @@ import re
 import streamlit as st
 GROQ_API_KEY = st.secrets.get("GROQ_API_KEY")
 
-if not groq_api_key:
-    raise ValueError("GROQ_API_KEY not set")
+
 
 # 2️⃣ Initialize Groq LLM
 llm = ChatGroq(
