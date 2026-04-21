@@ -18,8 +18,7 @@ llm = ChatGroq(
 )
 
 # Document loading and splitting
-document = load_document("project.docx")
-chunks = split_docs(document)
+
 
 
 def extract_json_from_text(text):
@@ -61,14 +60,7 @@ def fact_check_claim(claim: str) -> str:
     search_results = search.run(claim)
 
     # 2. Ask LLM to summarize truthfulness + provide references
-    prompt = f"""
-    Fact-check the following statement: "{claim}"
-    Based on this search result: "{search_results}"
-    Return a short summary indicating:
-    - True/False
-    - Corrected information if False
-    - Provide reference link(s)
-    """
+    prompt = f"Fact-check the following statement: '{claim}' ,Based on this search result: '{search_results}' Return a short summary indicating: - True/False- Corrected information if False- Provide reference link(s)"
     response = llm.invoke(prompt).content
     return response
 
@@ -143,10 +135,3 @@ def checking_grammar_chunks(chunks):
         })
 
     return results
-
-# Example usage
-all_chunk_results = checking_grammar_chunks(chunks)
-
-# Print results per chunk
-for r in all_chunk_results:
-    print(r)
