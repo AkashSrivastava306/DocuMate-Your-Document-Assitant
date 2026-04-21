@@ -1,6 +1,8 @@
-langchain
+
+langchain==0.1.16
+langchain-community==0.0.32
 langchain-groq
-langchain-community
+
 langchain-huggingface
 faiss-cpu
 sentence-transformers
