@@ -199,10 +199,4 @@ def formatting_pipeline(file_path: str) -> str:
     render_outline_to_docx(outline, template_config, output_file)
     return output_file
 
-# =======================
-# Example Usage
-# =======================
-if __name__ == "__main__":
-    input_file = "project.docx"
-    formatted_file = formatting_pipeline(input_file)
-    print(f"Formatted document saved at: {formatted_file}")
+
