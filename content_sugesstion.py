@@ -63,6 +63,4 @@ def process_document(input_file):
     return analysis
 
 
-# Example Usage
-if __name__ == "__main__":
-    process_document("project.docx")
+
