@@ -16,8 +16,8 @@ from pathlib import Path
 
 
 # Load environment variables
-load_dotenv()
-GROQ_API_KEY = os.getenv("GROQ_API_KEY")
+import streamlit as st
+GROQ_API_KEY = st.secrets.get("GROQ_API_KEY")
 
 # Initialize LLM
 llm = ChatGroq(
