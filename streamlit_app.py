@@ -13,14 +13,17 @@ st.set_page_config(page_title="DocuMate", layout="wide")
 st.title("📄 DocuMate - Your Document Assistant")
 
 # Upload file
-uploaded_file = st.file_uploader("Upload a PDF or Word document", type=["pdf", "docx"])
+import uuid
+from pathlib import Path
+
+uploaded_file = st.file_uploader("Upload document", type=["pdf", "docx", "pptx"])
 
 if uploaded_file:
-    # Ensure temp folder exists
     temp_dir = Path("temp")
     temp_dir.mkdir(exist_ok=True)
 
-    file_path = temp_dir / uploaded_file.name
+    file_path = temp_dir / f"{uuid.uuid4()}_{uploaded_file.name}"
+
     with open(file_path, "wb") as f:
         f.write(uploaded_file.getbuffer())
 
