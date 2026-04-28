@@ -9,7 +9,7 @@ import streamlit as st
 GROQ_API_KEY = st.secrets.get("GROQ_API_KEY")
 
 # ✅ Initialize Groq LLM
-llm = ChatGroq(model="llama3-70b-8192", api_key=GROQ_API_KEY)
+llm = ChatGroq(model="llama-3.3-70b-versatile", api_key=GROQ_API_KEY)
 
 def read_docx(file_path):
     """Extract text from a Word doc."""
